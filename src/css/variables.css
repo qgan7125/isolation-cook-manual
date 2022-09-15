@@ -1,0 +1,21 @@
+:root {
+    --color-vegetable: #e7fcef;
+    --color-vegetable-border: #bbf7d0;
+    --color-vegatable-select: #3cac5f;
+    --color-meat: #fdeeed;
+    --color-meat-border: #fbcaca;
+    --color-meat-select: #f0595a;
+    --color-staple: #fef9df;
+    --color-staple-border: #fdf08a;
+    --color-staple-select: #eab306;
+    --color-default: white;
+    --color-default-border: #e7e5e4;
+    --color-default-select: #57534e;
+    --color-bg-recipe: #f7f8f9;
+    --color-recipe: #e4eefa;
+    --color-recipe-border: #bfdbfe;
+    --color-recipe-select: #5ba1f7;
+    --color-btn-match-bg: #f8ece0;
+    --color-btn-select-bg: #f67318;
+    --color-btn-text: #9a3413;
+}

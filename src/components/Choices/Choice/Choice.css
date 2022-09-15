@@ -1,0 +1,17 @@
+.CookChoice__container {
+    text-align: center;
+}
+
+.CookChoice__container--items {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .CookChoice__container {
+        width: 100%;
+    }
+}

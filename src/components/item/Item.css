@@ -1,0 +1,81 @@
+.btn__item {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    border-radius: 15px;
+    padding: 4px 8px;
+}
+
+.btn__item span {
+    display: flex;
+}
+
+.btn__vege {
+    background-color: var(--color-vegetable);
+    border: 2px solid var(--color-vegetable-border);
+    color: var(--color-vegatable-select);
+    box-shadow: 3px 3px 10px var(--color-vegetable-border);
+}
+
+.btn__vege.active {
+    background-color: var(--color-vegatable-select);
+    color: white;
+    border: 2px solid var(--color-vegatable-select);
+    box-shadow: 3px 3px 10px var(--color-vegatable-select);
+}
+
+.btn__meat {
+    background-color: var(--color-meat);
+    border: 2px solid var(--color-meat-border);
+    color: var(--color-meat-select);
+    box-shadow: 3px 3px 10px var(--color-meat-border);
+}
+
+.btn__meat.active {
+    background-color: var(--color-meat-select);
+    color: white;
+    border: 2px solid var(--color-meat-select);
+    box-shadow: 3px 3px 10px var(--color-meat-select);
+}
+
+
+.btn__staple {
+    background-color: var(--color-staple);
+    border: 2px solid var(--color-staple-border);
+    color: var(--color-staple-select);
+    box-shadow: 3px 3px 10px var(--color-staple-border);
+}
+
+.btn__staple.active {
+    background-color: var(--color-staple-select);
+    color: white;
+    border: 2px solid var(--color-staple-select);
+    box-shadow: 3px 3px 10px var(--color-staple-select);
+}
+
+.btn__default {
+    background-color: var(--color-default);
+    border: 2px solid var(--color-default-border);
+    color: var(--color-default-select);
+    box-shadow: 3px 3px 10px var(--color-default-border);
+}
+
+.btn__default.active {
+    background-color: var(--color-default-select);
+    color: white;
+    border: 2px solid var(--color-default-select);
+    box-shadow: 3px 3px 10px var(--color-default-select);
+}
+
+.btn__default.active img {
+    filter: invert(1);
+}
+
+.btn__recipe {
+    background-color: var(--color-recipe);
+    border: 2px solid var(--color-recipe-border);
+    color: var(--color-recipe-select);
+    box-shadow: 3px 3px 10px var(--color-recipe-border);
+}
