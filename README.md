@@ -1,0 +1,1 @@
+# isolation-cook-manual
