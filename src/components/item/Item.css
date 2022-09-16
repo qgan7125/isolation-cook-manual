@@ -6,6 +6,8 @@
     font-size: 1.1em;
     border-radius: 15px;
     padding: 4px 8px;
+    min-width: 81px;
+    min-height: 38px;
 }
 
 .btn__item span {

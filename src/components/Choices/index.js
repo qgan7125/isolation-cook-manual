@@ -14,7 +14,7 @@ const CookChoices = () => {
     return (
         <section className="Choices__container">
             <h1>选择一下食材</h1>
-            <button onClick={handleClear}>Clear</button>
+            <button className="btn__item" onClick={handleClear}>Clear</button>
             {
                 data.map(f => <CookChoice key={f.name} food={f} />)
             }

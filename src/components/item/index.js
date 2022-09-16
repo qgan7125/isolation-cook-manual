@@ -28,11 +28,13 @@ const Item = ({ name, FirstEmojis, SecondEmojis, type }) => {
     return arr.findIndex(f => f === target) >= 0;
   }
 
-  const handleClick = () => {
-    if (type !== "tools") {
+  const handleClick = (e) => {
+    if (["vegetable", "meat", "staple"].includes(type)) {
       dispatch(toggleFood(name));
-    } else {
+    } else if (type === "tools") {
       dispatch(selectTool(name));
+    } else {
+      window.open("https://www.youtube.com/results?search_query=" + name, '_blank', 'noopener,noreferrer');
     }
   }
 

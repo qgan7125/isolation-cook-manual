@@ -4,25 +4,3 @@
     justify-content: space-between;
     border-bottom: 1px solid black;
 }
-
-.nav__container ul,
-.nav__container li {
-    list-style: none;
-}
-
-.nav__container ul {
-    display: flex;
-    gap: 5px;
-}
-
-.btn__lng {
-    padding: 2px 5px;
-    min-width: 70px;
-    min-height: 30px;
-}
-
-@media only screen and (max-width: 600px) {
-    .nav__container ul{
-        flex-direction: column;
-    }
-}

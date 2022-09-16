@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import papaparse from "papaparse";
 import dataChoices from "../../data/food";
-import allRecipes from "../../data/recipe.csv";
 import "./Recipe.css";
 import Item from "../item";
+
+const recipesURL = "https://raw.githubusercontent.com/YunYouJun/cook/dev/src/data/recipe.csv";
 
 const filterRecipe = (data, food, tool, similar) => {
     const len = food.length;
@@ -17,10 +18,12 @@ const filterRecipe = (data, food, tool, similar) => {
 
     if (len === 0) { return currData }
 
+
     return currData?.filter(d => {
+        if (d.length !== 8) { return false }
         const currRecipe = d[1].split("、");
         const intersection = currRecipe.filter(f => food.includes(f));
-        return similar ? intersection.length === len : Math.floor(len * 0.2) < intersection.length && intersection.length <= len;
+        return similar ? intersection.length === len : Math.floor(len * 0.3) < intersection.length && intersection.length <= len;
     });
 }
 
@@ -32,7 +35,7 @@ const Recipe = () => {
     const food = useSelector(state => state.cook.food);
 
     useEffect(() => {
-        papaparse.parse(allRecipes, {
+        papaparse.parse(recipesURL, {
             download: true,
             complete: (input) => {
                 setData(input.data);
@@ -41,7 +44,6 @@ const Recipe = () => {
     }, [])
 
     useEffect(() => {
-
         if (tool.length > 0 || food.length > 0) {
             const matchedRecipes = filterRecipe(data?.slice(1), food, tool, similar);
             setRecipes(matchedRecipes);
